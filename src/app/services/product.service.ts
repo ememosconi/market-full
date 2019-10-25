@@ -15,4 +15,10 @@ export class ProductService {
   getProducts() {
     return this.httpClient.get(this.serviceUrl);
   }
+
+  getProduct(productId){
+    const fullUrl = this.serviceUrl + '/' + productId;
+    return this.httpClient.get(fullUrl);
+
+  }
 }
